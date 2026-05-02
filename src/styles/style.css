@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Merriweather&family=Montserrat:wght@500&display=swap');
+
+:root {
+	--color-primary: #3057a2;
+	--color-secondary: #f54932;
+	--color-light: #e9ded4;
+	--color-dark: #1f1f1f;
+	--color-body: #313131;
+	--color-white: #ffffff;
+
+	--font-primary: 'Golos Text', sans-serif;
+	--font-accent: 'Merriweather', sans-serif;
+	--font-special: 'Montserrat', sans-serif;
+
+	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+
+	--font-size-16: 16px;
+	--font-size-18: 18px;
+	--font-size-20: 20px;
+	--font-size-34: 34px;
+	--font-size-54: 54px;
+	--font-size-60: 60px;
+
+	--text-body: var(--font-size-16); /* основной текст */
+	--text-button: var(--font-size-18); /* кнопки, подзаголовки */
+	--text-lead: var(--font-size-20); /* лиды, акценты */
+	--text-title: var(--font-size-34); /* подзаголовки секций */
+	--text-heading-1: var(--font-size-54); /* главный слоган */
+	--text-heading-super: var(--font-size-60); /* крупный заголовок-акцент */
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: var(--font-primary);
+	font-weight: var(--font-weight-regular);
+	font-size: var(--text-body);
+	line-height: 1.35;
+	color: var(--color-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-accent);
+	font-weight: var(--font-weight-regular);
+	color: var(--color-dark);
+}
+
+button {
+	font-family: var(--font-special);
+	font-weight: var(--font-weight-medium);
+}
+
+.tournament-header {
+	background-color: var(--color-light);
+	min-height: 700px;
+}
+
+.tournament-header__topbar {
+	padding-top: 28px;
+	margin-bottom: 55px;
+}
+
+.tournament-header__logo {
+	max-width: 245px;
+}
+
+.tournament-header__title {
+	font-size: var(--text-heading-super);
+	text-transform: uppercase;
+	line-height: 1.1;
+	letter-spacing: 0.8px;
+}
+
+.tournament-header__title-sub {
+	display: inline-block;
+	text-align: center;
+}
+
+/* Базовый контейнер сетки */
+.container {
+	max-width: 1222px;
+	margin: 0 auto;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 20px; /* отступы между колонками */
+}
+
+/* Классы колонок */
+.col-1 {
+	grid-column: span 1;
+}
+.col-2 {
+	grid-column: span 2;
+}
+.col-3 {
+	grid-column: span 3;
+}
+.col-4 {
+	grid-column: span 4;
+}
+.col-5 {
+	grid-column: span 5;
+}
+.col-6 {
+	grid-column: span 6;
+}
+.col-7 {
+	grid-column: span 7;
+}
+.col-8 {
+	grid-column: span 8;
+}
+.col-9 {
+	grid-column: span 9;
+}
+.col-10 {
+	grid-column: span 10;
+}
+.col-11 {
+	grid-column: span 11;
+}
+.col-12 {
+	grid-column: span 12;
+}
