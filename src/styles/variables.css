@@ -32,6 +32,6 @@
 	--text-heading-super: var(--font-size-60);
 
 	--btn-radius: 66px;
-	--btn-padding-y: 20px;
-	--btn-padding-x: 24px;
+	--btn-padding-y: 12px;
+	--btn-padding-x: 20px;
 }

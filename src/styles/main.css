@@ -1,7 +1,9 @@
 @import './variables.css';
+@import './fonts.css';
 @import './reset.css';
 @import './grid.css';
 @import './typography.css';
 @import './utilities.css';
-@import './components/tournament-header.css';
 @import './components/button.css';
+@import './components/tournament-header.css';
+@import './components/run-line.css';
