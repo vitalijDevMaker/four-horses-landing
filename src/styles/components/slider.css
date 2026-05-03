@@ -1,0 +1,16 @@
+.slider {
+	&__viewport {
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__track {
+		display: flex;
+		flex-wrap: nowrap;
+		transition: all ease 0.5s;
+	}
+
+	&__item {
+		flex: 1 0 100%;
+	}
+}

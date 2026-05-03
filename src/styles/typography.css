@@ -3,8 +3,15 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.title {
 	font-family: var(--font-accent);
 	font-weight: var(--font-weight-regular);
 	color: var(--color-dark);
+  text-transform: uppercase;
+  letter-spacing: .25px;
+}
+
+h2 {
+  font-size: var(--text-title);
 }

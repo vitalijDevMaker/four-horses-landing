@@ -8,6 +8,7 @@
 	display: flex;
 	width: max-content;
 	animation: run-line-scroll 24s linear infinite;
+	will-change: transform;
 
 	&:hover {
 		animation-play-state: paused;

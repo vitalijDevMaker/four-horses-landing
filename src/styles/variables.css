@@ -4,6 +4,7 @@
 	--color-light: #e9ded4;
 	--color-dark: #1f1f1f;
 	--color-body: #313131;
+	--color-body-light: rgba(var(--color-body), .6);
 	--color-white: #ffffff;
 	--color-gray-light: #d6d6d6;
 	--color-gold: #fbce51;
@@ -20,18 +21,25 @@
 	--font-size-16: 16px;
 	--font-size-18: 18px;
 	--font-size-20: 20px;
-	--font-size-34: 34px;
+
+	--font-size-36: 36px;
 	--font-size-54: 54px;
 	--font-size-60: 60px;
 
 	--text-body: var(--font-size-16); /* основной текст */
 	--text-button: var(--font-size-18); /* кнопки, подзаголовки */
 	--text-lead: var(--font-size-20); /* лиды, акценты */
-	--text-title: var(--font-size-34); /* подзаголовки секций */
+	--text-title: 36px; /* подзаголовки секций */
 	--text-heading-1: var(--font-size-54); /* главный слоган */
 	--text-heading-super: var(--font-size-60);
 
 	--btn-radius: 66px;
 	--btn-padding-y: 12px;
 	--btn-padding-x: 20px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --text-title: 28px;
+  }
 }

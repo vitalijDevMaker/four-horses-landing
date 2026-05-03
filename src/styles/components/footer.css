@@ -1,0 +1,10 @@
+.footer {
+    --footer-padding: 40px 0 72px 0;
+    background-color: var(--color-light);
+    padding: var(--footer-padding);
+    
+    &__text {
+        line-height: 120%;
+        color: var(--color-body-light);
+    }
+}
