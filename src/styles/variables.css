@@ -42,5 +42,6 @@
 @media (max-width: 767px) {
   :root {
     --text-title: 28px;
+    --text-heading-super: 36px;
   }
 }
