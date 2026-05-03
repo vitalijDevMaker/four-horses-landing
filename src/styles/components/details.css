@@ -1,0 +1,33 @@
+.details {
+  font-size: var(--text-lead);
+
+  &__row {
+    display: flex;
+
+    &:not(:last-child) {
+      border-bottom: 2px solid var(--color-gray-lighter);
+    }
+
+    &:first-child {
+      .details__key,
+      .details__value {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__key {
+    color: var(--color-body-light);
+    padding: 16px 0 16px 0;
+    flex: 1 0 50%;
+    border-right: 2px solid var(--color-gray-lighter);
+
+
+  }
+
+  &__value {
+    font-weight: var(--font-weight-semibold);
+    padding: 16px;
+    flex: 1 0 50%;
+  }
+}

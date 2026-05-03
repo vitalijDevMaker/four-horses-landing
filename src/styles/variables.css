@@ -4,10 +4,11 @@
 	--color-light: #e9ded4;
 	--color-dark: #1f1f1f;
 	--color-body: #313131;
-	--color-body-light: rgba(var(--color-body), .6);
+	--color-body-light: rgba(49,49,49, .6);
 	--color-white: #ffffff;
 	--color-gray-light: #d6d6d6;
 	--color-gold: #fbce51;
+  --color-gray-lighter: #D0D0D0;
 
 	--font-primary: 'Golos Text', sans-serif;
 	--font-accent: 'Merriweather', sans-serif;
