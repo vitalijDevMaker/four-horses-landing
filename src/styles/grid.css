@@ -1,14 +1,14 @@
 .container {
-	max-width: 1222px;
-	margin: 0 auto;
+  max-width: 1222px;
+  margin: 0 auto;
   padding: 0 20px;
   box-sizing: content-box;
 }
 
 .grid {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	gap: 0 20px; /* отступы между колонками */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0 20px; /* отступы между колонками */
 }
 
 [class*="col-"] {
@@ -52,8 +52,7 @@
   grid-column: span 12;
 }
 
-
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .col-md-1 {
     grid-column: span 1;
   }

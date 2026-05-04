@@ -1,43 +1,96 @@
 .tournament-header {
-	background-color: var(--color-light);
-	min-height: 700px;
+  background-color: var(--color-light);
+  background-image: image-set(
+    url("../../assets/img/header-bg-mobile.jpg") 1x,
+    url("../../assets/img/header-bg-mobile@2x.jpg") 2x
+  );
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 756px 812px;
+  min-height: 775px;
 
-	&__content {
-		max-width: 544px;
-	}
+  &__content {
+    max-width: 100%;
+  }
 
-	&__topbar {
-		padding-top: 28px;
-		margin-bottom: 55px;
-	}
+  &__logo {
+    max-width: 213px;
+  }
 
-	&__logo {
-		max-width: 245px;
-	}
+  &__topbar {
+    padding-top: 18px;
+    margin-bottom: 35px;
+  }
 
-	&__title {
-		font-size: var(--text-heading-super);
-		text-transform: uppercase;
-		line-height: 1.1;
-		letter-spacing: 0.8px;
-		margin-bottom: 24px;
-	}
+  &__title {
+    font-size: var(--text-heading-super);
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: 0.8px;
+    margin-bottom: 24px;
+  }
 
-	&__title-sub {
-		display: inline-block;
-		text-align: center;
-	}
+  &__title-sub {
+    display: inline-block;
+    text-align: center;
+  }
 
-	&__description {
-		margin-bottom: 40px;
-		text-align: center;
-		font-size: var(--font-size-18);
-	}
+  &__description {
+    margin-bottom: 30px;
+    text-align: left;
+    font-size: var(--font-size-18);
+  }
 
-	&__actions {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		justify-content: center;
-		gap: 16px;
-	}
+  &__actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  &__btn {
+    min-height: 47px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .tournament-header {
+    background-image: image-set(
+      url("../../assets/img/header-bg-desktop.jpg") 1x,
+      url("../../assets/img/header-bg-desktop@2x.jpg") 2x
+    );
+    background-size: cover;
+    background-position: center top;
+    min-height: 700px;
+
+    &__topbar {
+      padding-top: 28px;
+      margin-bottom: 55px;
+    }
+
+    &__logo {
+      max-width: 245px;
+    }
+
+    &__description {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    &__actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    &__content {
+      max-width: 545px;
+    }
+
+    &__btn {
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+  }
 }

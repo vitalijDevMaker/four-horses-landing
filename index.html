@@ -29,26 +29,28 @@
               </span>
             </h1>
             <p class="tournament-header__description">
-              Оплатите взнос на телеграммы для организации
-              <br />
-              Международного васюкинского турнира по шахматам
+              Оплатите взнос на телеграммы для организации Международного
+              васюкинского турнира по шахматам
             </p>
             <div class="tournament-header__actions">
-              <button class="btn btn-primary">
-                Поддержать
-                <br />
-                шахматную мысль
-              </button>
-              <button class="btn btn-transparent">
-                Подробнее
-                <br />
-                о турнире
-              </button>
+              <a
+                href="#support-heading"
+                class="btn btn-primary tournament-header__btn"
+              >
+                Поддержать шахматную мысль
+              </a>
+              <a
+                href="#stages-heading"
+                class="btn btn-transparent tournament-header__btn"
+              >
+                Подробнее о турнире
+              </a>
             </div>
           </div>
         </div>
       </div>
     </header>
+
     <section class="run-line" aria-label="Новости турнира">
       <div class="run-line__track">
         <div class="run-line__content">
@@ -67,8 +69,12 @@
         </div>
       </div>
     </section>
-    <main>
-      <section class="support" aria-labelledby="support-heading">
+
+    <main class="sections">
+      <section
+        class="support sections__support"
+        aria-labelledby="support-heading"
+      >
         <div class="container">
           <div class="grid support__header-grid">
             <h2
@@ -76,10 +82,10 @@
               class="title support__title support__title--top"
             >
               Чтобы поддержать <br />
-              Международный васюкинский
+              Международный васюкинский турнир
             </h2>
             <div class="title support__title support__title--bottom">
-              турнир посетите лекцию на тему:
+              посетите лекцию на тему:
               <span class="support__title--danger">
                 «Плодотворная дебютная идея»
               </span>
@@ -141,20 +147,19 @@
         </div>
       </section>
 
-      <section class="stages">
+      <section class="stages sections__stages" aria-labelledby="stages-heading">
         <div class="container">
           <div class="stages__title-wrapper">
-            <h2 class="title title--1 stages__title">
+            <h2 id="stages-heading" class="title title--1 stages__title">
               Этапы преображения <br />
               Васюков
             </h2>
-            <a href="" class="link"
-              >Будущие источники <br />
-              обогащения васюкинцев</a
+            <a href="" class="link stages__link"
+              >Будущие источники обогащения васюкинцев</a
             >
           </div>
           <div
-            class="slider stages__slider"
+            class="slider stages-slider"
             id="stages-slider"
             role="region"
             aria-roledescription="carousel"
@@ -206,7 +211,8 @@
                   <div class="stage-block">
                     <div class="stage-block__number">5</div>
                     <div class="stage-block__text">
-                      Размещение гаражей для гостевого автотранспорта
+                      Размещение гаражей для гостевого <br />
+                      автотранспорта
                     </div>
                   </div>
                 </li>
@@ -233,17 +239,11 @@
                       отправлением почтовых самолётов и дирижаблей во все концы
                       света, включая Лос-Анжелос и Мельбурн
                     </div>
-                    <img
-                      class="stage-block__plane"
-                      src="./src/assets/img/plane.png"
-                      alt=""
-                      aria-hidden="true"
-                    />
                   </div>
                 </li>
               </ul>
 
-              <div class="slider__actions">
+              <div class="slider__actions stages-slider__actions">
                 <button
                   class="slider__prev"
                   type="button"
@@ -298,28 +298,11 @@
           </div>
         </div>
       </section>
-      <section>
-        <div class="slider" id="participants-slider">
-          <div class="slider__viewport">
-            <div class="slider__track">
-              <div class="slider__item">1</div>
-              <div class="slider__item">2</div>
-              <div class="slider__item">3</div>
 
-              <div class="slider__item">4</div>
-              <div class="slider__item">5</div>
-              <div class="slider__item">6</div>
-
-              <div class="slider__item">4</div>
-              <div class="slider__item">5</div>
-              <div class="slider__item">6</div>
-
-              <div class="slider__item">4</div>
-              <div class="slider__item">5</div>
-              <div class="slider__item">6</div>
-              <div class="slider__item">sdfds</div>
-            </div>
-
+      <section class="participants sections__participants">
+        <div class="container participants__container">
+          <h2 class="title title--1 participants__title">Участники турнира</h2>
+          <div class="slider" id="participants-slider">
             <div class="slider__actions">
               <div class="slider__actions">
                 <button
@@ -346,7 +329,7 @@
                     />
                   </svg>
                 </button>
-                <div class="slider-pagination"></div>
+                <div class="slider__info"></div>
                 <button
                   class="slider__next"
                   type="button"
@@ -373,10 +356,99 @@
                 </button>
               </div>
             </div>
+            <div class="slider__viewport">
+              <ul class="slider__track participants-list">
+                <li class="slider__item participants-list__item">
+                  <article class="participant-card">
+                    <img
+                      class="participant-card__image"
+                      src="./src/assets/img/participant-placeholder.png"
+                      alt="Хозе-Рауль Капабланка"
+                    />
+                    <h3 class="participant-card__name">
+                      Хозе-Рауль Капабланка
+                    </h3>
+                    <p class="participant-card__status">
+                      Чемпион мира по шахматам
+                    </p>
+                    <a class="btn btn-transparent" href="#"> Подробнее </a>
+                  </article>
+                </li>
+                <li class="slider__item participants-list__item">
+                  <article class="participant-card">
+                    <img
+                      class="participant-card__image"
+                      src="./src/assets/img/participant-placeholder.png"
+                      alt="Эммануил Ласкер"
+                    />
+                    <h3 class="participant-card__name">Эммануил Ласкер</h3>
+                    <p class="participant-card__status">
+                      Чемпион мира по шахматам
+                    </p>
+                    <a class="btn btn-transparent" href="#"> Подробнее </a>
+                  </article>
+                </li>
+                <li class="slider__item participants-list__item">
+                  <article class="participant-card">
+                    <img
+                      class="participant-card__image"
+                      src="./src/assets/img/participant-placeholder.png"
+                      alt="Александр Алехин"
+                    />
+                    <h3 class="participant-card__name">Александр Алехин</h3>
+                    <p class="participant-card__status">
+                      Чемпион мира по шахматам
+                    </p>
+                    <a class="btn btn-transparent" href="#"> Подробнее </a>
+                  </article>
+                </li>
+                <li class="slider__item participants-list__item">
+                  <article class="participant-card">
+                    <img
+                      class="participant-card__image"
+                      src="./src/assets/img/participant-placeholder.png"
+                      alt="Арон Нимцович"
+                    />
+                    <h3 class="participant-card__name">Арон Нимцович</h3>
+                    <p class="participant-card__status">
+                      Чемпион мира по шахматам
+                    </p>
+                    <a class="btn btn-transparent" href="#"> Подробнее </a>
+                  </article>
+                </li>
+                <li class="slider__item participants-list__item">
+                  <article class="participant-card">
+                    <img
+                      class="participant-card__image"
+                      src="./src/assets/img/participant-placeholder.png"
+                      alt="Рихард Рети"
+                    />
+                    <h3 class="participant-card__name">Рихард Рети</h3>
+                    <p class="participant-card__status">
+                      Чемпион мира по шахматам
+                    </p>
+                    <a class="btn btn-transparent" href="#"> Подробнее </a>
+                  </article>
+                </li>
+                <li class="slider__item participants-list__item">
+                  <article class="participant-card">
+                    <img
+                      class="participant-card__image"
+                      src="./src/assets/img/participant-placeholder.png"
+                      alt="Остап Бендер"
+                    />
+                    <h3 class="participant-card__name">Остап Бендер</h3>
+                    <p class="participant-card__status">Гроссмейстер</p>
+                    <a class="btn btn-transparent" href="#"> Подробнее </a>
+                  </article>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
     </main>
+
     <section class="run-line" aria-label="Новости турнира">
       <div class="run-line__track">
         <div class="run-line__content">

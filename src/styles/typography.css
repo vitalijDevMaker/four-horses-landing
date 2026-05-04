@@ -5,11 +5,11 @@ h4,
 h5,
 h6,
 .title {
-	font-family: var(--font-accent);
-	font-weight: var(--font-weight-regular);
-	color: var(--color-dark);
+  font-family: var(--font-accent);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-dark);
   text-transform: uppercase;
-  letter-spacing: .25px;
+  letter-spacing: 0.25px;
 }
 
 h2 {
@@ -19,16 +19,17 @@ h2 {
 .title {
   &--1 {
     font-size: var(--text-heading-1);
+    line-height: 1.25;
   }
 }
 
 .link {
   display: inline-block;
   line-height: 120%;
-  font-size: var(--text-lead);
+  font-size: var(--text-link);
   color: var(--color-primary);
   text-decoration: none;
-  text-transform:none;
+  text-transform: none;
   font-family: var(--font-primary);
   font-weight: var(--font-weight-regular);
 

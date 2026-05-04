@@ -1,21 +1,21 @@
-
 .details {
   font-size: var(--text-lead);
 
   &__row {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   &__row + &__row {
-    margin-top: 16px;
-    padding-top: 16px;
+    margin-top: 12px;
+    padding-top: 12px;
     border-top: 2px solid var(--color-gray-lighter);
   }
 
   &__key {
     color: var(--color-body-light);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    margin-right: 13px;
   }
 
   &__value {
@@ -26,6 +26,7 @@
 @media (min-width: 768px) {
   .details {
     &__row {
+      display: grid;
       grid-template-columns: 306px 1fr;
 
       &:not(:last-child) {

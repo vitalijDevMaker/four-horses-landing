@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "participants-slider",
   );
   const sliderStages = new Slider(stagesSliderContainer, {
-    autoPlay: 4000,
+    autoPlay: false,
     pagination: true,
     noTransformUp: 768,
   });
@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     autoPlay: false,
     pagination: false,
     slideToShow: 3,
+    showInfo: true,
     breakpoints: {
       992: {
         slideToShow: 2,

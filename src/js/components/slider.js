@@ -2,6 +2,7 @@ class Slider {
   sliderContainer;
   constructor(el, options = {}) {
     this.options = {
+      showInfo: options.showInfo ?? false,
       autoPlay: options.autoPlay ?? false,
       pagination: options.pagination ?? false,
       slideToShow: options.slideToShow ?? 1,
@@ -18,6 +19,7 @@ class Slider {
     this.pagination = this.sliderContainer.querySelector(".slider-pagination");
     this.prevBtn = this.sliderContainer.querySelector(".slider__prev");
     this.nextBtn = this.sliderContainer.querySelector(".slider__next");
+    this.info = this.sliderContainer.querySelector(".slider__info");
     this.currentIndex = 0;
     this.autoPlayTimerId = null;
     this.resizeTimerId = null;
@@ -33,7 +35,7 @@ class Slider {
   }
 
   getLengthSlides() {
-    return this.sliders.length;
+    return this.slides.length;
   }
 
   get maxIndex() {
@@ -133,7 +135,7 @@ class Slider {
   }
 
   updateUI() {
-    if (this.pagination) {
+    if (this.options.pagination && this.pagination) {
       Array.from(this.pagination.children).forEach((paginationItem, index) => {
         if (index !== this.currentIndex) {
           paginationItem.classList.add("slider-pagination__item--active");
@@ -141,6 +143,14 @@ class Slider {
           paginationItem.classList.remove("slider-pagination__item--active");
         }
       });
+    }
+    if (this.options.showInfo && this.info) {
+      const totalSlides = this.getLengthSlides();
+      const visibleSlides = Math.min(
+        (this.currentIndex + 1) * this.options.slideToShow,
+        totalSlides,
+      );
+      this.info.textContent = `${visibleSlides} / ${totalSlides}`;
     }
     const isAtStart = this.currentIndex <= 0;
     const isAtEnd = this.currentIndex >= this.maxIndex;

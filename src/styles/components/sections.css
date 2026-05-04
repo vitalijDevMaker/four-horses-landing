@@ -1,0 +1,29 @@
+.sections {
+  &__support {
+    margin: 48px 0 119px;
+  }
+
+  &__stages {
+    margin-bottom: 200px;
+  }
+
+  &__participants {
+    margin-bottom: 140px;
+  }
+}
+
+@media (min-width: 768px) {
+  .sections {
+    &__support {
+      margin: 106px 0 185px;
+    }
+
+    &__stages {
+      margin-bottom: 200px;
+    }
+
+    &__participants {
+      margin-bottom: 140px;
+    }
+  }
+}

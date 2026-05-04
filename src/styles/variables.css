@@ -1,48 +1,50 @@
 :root {
-	--color-primary: #3057a2;
-	--color-secondary: #f54932;
-	--color-light: #e9ded4;
-	--color-dark: #1f1f1f;
-	--color-body: #313131;
-	--color-body-light: rgba(49,49,49, .6);
-	--color-white: #ffffff;
-	--color-gray-light: #d6d6d6;
-	--color-gold: #fbce51;
-  --color-gray-lighter: #D0D0D0;
-  --color-disabled: #D9D9D9;
+  --color-primary: #3057a2;
+  --color-secondary: #f54932;
+  --color-light: #e9ded4;
+  --color-dark: #1f1f1f;
+  --color-body: #313131;
+  --color-body-light: rgba(49, 49, 49, 0.6);
+  --color-white: #ffffff;
+  --color-gray-light: #d6d6d6;
+  --color-gold: #fbce51;
+  --color-gray-lighter: #d0d0d0;
+  --color-disabled: #d9d9d9;
 
-	--font-primary: 'Golos Text', sans-serif;
-	--font-accent: 'Merriweather', sans-serif;
-	--font-special: 'Montserrat', sans-serif;
+  --font-primary: "Golos Text", sans-serif;
+  --font-accent: "Merriweather", sans-serif;
+  --font-special: "Montserrat", sans-serif;
 
-	--font-weight-regular: 400;
-	--font-weight-medium: 500;
-	--font-weight-semibold: 600;
-	--font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
-	--font-size-16: 16px;
-	--font-size-18: 18px;
-	--font-size-20: 20px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
 
-	--font-size-36: 36px;
-	--font-size-54: 54px;
-	--font-size-60: 60px;
+  --font-size-36: 36px;
+  --font-size-54: 54px;
+  --font-size-60: 60px;
 
-	--text-body: var(--font-size-16); /* основной текст */
-	--text-button: var(--font-size-18); /* кнопки, подзаголовки */
-	--text-lead: var(--font-size-20); /* лиды, акценты */
-	--text-title: 36px; /* подзаголовки секций */
-	--text-heading-1: var(--font-size-54); /* главный слоган */
-	--text-heading-super: var(--font-size-60);
-
-	--btn-radius: 66px;
-	--btn-padding-y: 12px;
-	--btn-padding-x: 20px;
+  --text-body: var(--font-size-16); /* основной текст */
+  --text-button: var(--font-size-18); /* кнопки, подзаголовки */
+  --text-lead: var(--font-size-20); /* лиды, акценты */
+  --text-title: 36px; /* подзаголовки секций */
+  --text-heading-1: var(--font-size-54); /* главный слоган */
+  --text-heading-super: var(--font-size-60);
+  --text-link: 20px;
+  --btn-radius: 66px;
+  --btn-padding-y: 12px;
+  --btn-padding-x: 20px;
 }
 
 @media (max-width: 767px) {
   :root {
     --text-title: 28px;
     --text-heading-super: 36px;
+    --text-heading-1: 36px;
+    --text-link: 18px;
   }
 }

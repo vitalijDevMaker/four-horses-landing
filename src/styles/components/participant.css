@@ -1,0 +1,53 @@
+.participants {
+  &__title {
+    margin-bottom: 55px;
+  }
+
+  &__container {
+    position: relative;
+  }
+}
+
+.participants-list {
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    padding: 0 12px;
+  }
+}
+
+.participant-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+
+  &__image {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+  }
+
+  &__image {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  #participants-slider {
+    > .slider__actions {
+      position: absolute;
+      top: 9px;
+      right: 22px;
+      z-index: 2;
+    }
+
+    .slider__icon {
+      width: 44px;
+      height: 44px;
+    }
+  }
+}

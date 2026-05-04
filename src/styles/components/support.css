@@ -1,5 +1,5 @@
-.support  {
-  --support-header-m: 48px 0 34px 0;
+.support {
+  --support-header-m: 0 0 40px 0;
 
   &__header-grid {
     margin: var(--support-header-m);
@@ -30,19 +30,29 @@
     grid-row: 2;
   }
 
-
   &__img-left {
     max-width: 100%;
+    max-width: 110%;
+    position: relative;
+    left: -16px;
+    margin-bottom: 22px;
   }
 
   &__details-list {
-    margin: 44px 0 40px 0;
+    margin: 44px 0 35px 0;
   }
 }
 
 @media (min-width: 768px) {
   .support {
-    --support-header-m: 106px 0 37px 0;
+    --support-header-m: 0 0 37px 0;
+
+    &__img-left {
+      max-width: 100%;
+      position: static;
+      left: auto;
+      margin-bottom: 0;
+    }
 
     &__title {
       &--top {
