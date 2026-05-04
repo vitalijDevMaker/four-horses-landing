@@ -1,8 +1,27 @@
-import '../styles/main.css'
-import Slider from './components/slider'
+import "../styles/main.css";
+import Slider from "./components/slider";
 
-document.addEventListener('DOMContentLoaded', () => {
-	document.querySelectorAll('[data-slider]').forEach(s => {
-		let slider = new Slider(s)
-	})
-})
+document.addEventListener("DOMContentLoaded", () => {
+  const stagesSliderContainer = document.getElementById("stages-slider");
+  const participantsSliderContainer = document.getElementById(
+    "participants-slider",
+  );
+  const sliderStages = new Slider(stagesSliderContainer, {
+    autoPlay: 4000,
+    pagination: true,
+    noTransformUp: 768,
+  });
+  const participantStages = new Slider(participantsSliderContainer, {
+    autoPlay: false,
+    pagination: false,
+    slideToShow: 3,
+    breakpoints: {
+      992: {
+        slideToShow: 2,
+      },
+      768: {
+        slideToShow: 1,
+      },
+    },
+  });
+});

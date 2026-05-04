@@ -7,10 +7,73 @@
 	&__track {
 		display: flex;
 		flex-wrap: nowrap;
-		transition: all ease 0.5s;
+		transition: transform ease 0.5s;
+    list-style-type: none;
 	}
 
-	&__item {
-		flex: 1 0 100%;
+	&__actions {
+		display: flex;
+		align-items: center;
+		gap: 14px;
 	}
+
+	&__prev,
+	&__next {
+		--slider-btn-bg: var(--color-body);
+		--slider-btn-arrow: var(--color-white);
+		border: 0;
+		background: transparent;
+		padding: 0;
+		cursor: pointer;
+	}
+
+	&__icon {
+		display: block;
+    width: 36px;
+    height: 36px;
+	}
+
+	&__prev &__icon {
+		transform: rotate(180deg);
+	}
+
+	&__icon-bg {
+		fill: var(--slider-btn-bg);
+		transition: fill 0.2s ease;
+	}
+
+	&__icon-arrow {
+		stroke: var(--slider-btn-arrow);
+		transition: stroke 0.2s ease;
+	}
+
+	&__prev:hover,
+	&__next:hover {
+		--slider-btn-bg: var(--color-gold);
+		--slider-btn-arrow: var(--color-body);
+	}
+
+	&__prev:disabled,
+	&__next:disabled {
+		--slider-btn-bg: var(--color-gray-light);
+		--slider-btn-arrow: var(--color-white);
+		cursor: default;
+	}
+
+  &-pagination {
+    display: flex;
+    gap: 0 10px;
+
+    &__item {
+      outline: none;
+      border: none;
+      flex: 1 0 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--color-body);
+      &--active {
+        background-color: var(--color-disabled);
+      }
+    }
+  }
 }

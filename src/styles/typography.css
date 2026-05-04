@@ -16,11 +16,22 @@ h2 {
   font-size: var(--text-title);
 }
 
+.title {
+  &--1 {
+    font-size: var(--text-heading-1);
+  }
+}
+
 .link {
+  display: inline-block;
   line-height: 120%;
   font-size: var(--text-lead);
   color: var(--color-primary);
   text-decoration: none;
+  text-transform:none;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+
   &:hover {
     text-decoration: underline;
   }
