@@ -8,11 +8,15 @@
     "build": "vite build",
     "build:gh-pages": "GITHUB_PAGES=true vite build",
     "deploy": "npm run build:gh-pages && gh-pages -d dist",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "images:optimize": "node optimize-images.js"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
+    "glob": "^13.0.6",
     "postcss-nested": "^7.0.2",
+    "sharp": "^0.34.5",
+    "unplugin-imagemin": "^0.7.0",
     "vite": "^8.0.10"
   }
 }
