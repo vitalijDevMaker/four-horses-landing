@@ -56,13 +56,9 @@
   .tournament-header {
     &__btn {
       &--white-on-mobile {
-        --btn-bg: rgba(var(--color-white), 0.6);
+        --btn-bg: rgba(225, 255, 255, 0.6);
         --btn-color: var(--color-primary);
-        --btn-border-color: rgba(var(--color-white), 0.6);
-
-        --btn-hover-bg: transparent;
-        --btn-hover-color: var(--color-primary);
-        --btn-hover-border-color: rgba(var(--color-white), 0.6);
+        --btn-border-color: rgba(rgba(225, 255, 255, 0.6), 0.6);
       }
     }
   }
