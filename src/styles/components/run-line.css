@@ -1,67 +1,70 @@
 .run-line {
-  background-color: var(--color-secondary);
+  background-color: var(--color-danger);
   color: var(--color-white);
   overflow: hidden;
-}
 
-.run-line__track {
-  display: flex;
-  width: max-content;
-  animation: run-line-scroll 24s linear infinite;
-  will-change: transform;
-
-  &:hover {
-    animation-play-state: paused;
+  &__track {
+    display: flex;
+    width: max-content;
+    animation: run-line-scroll 24s linear infinite;
+    will-change: transform;
   }
-}
 
-.run-line__content {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-  line-height: 1.1;
-  padding: 10px 0;
-}
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    line-height: 1.1;
+    padding: 10px 0;
 
-.run-line__content span {
-  font-family: var(--font-accent);
-  font-size: 16px;
-  text-transform: uppercase;
-  white-space: nowrap;
-  display: inline-flex;
-  align-items: center;
-}
-
-.run-line__content span::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--color-white);
-  margin-left: 12px;
-}
-
-@keyframes run-line-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .run-line__track {
-    animation: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .run-line__content {
-    padding: 18px 0;
     span {
-      font-size: 22px;
+      font-family: var(--font-accent);
+      font-size: 16px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+
+      &::after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--color-white);
+        margin-left: 12px;
+      }
+    }
+  }
+
+  @keyframes run-line-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &__track {
+      animation: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__content {
+      padding: 18px 0;
+
+      span {
+        font-size: 22px;
+      }
+    }
+
+    &__track {
+      &:hover {
+        animation-play-state: paused;
+      }
     }
   }
 }

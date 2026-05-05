@@ -146,11 +146,14 @@ class Slider {
     }
     if (this.options.showInfo && this.info) {
       const totalSlides = this.getLengthSlides();
+      const currentContainer = this.info.querySelector(".slider__info-current");
+      const totalContainer = this.info.querySelector(".slider__info-total");
       const visibleSlides = Math.min(
         (this.currentIndex + 1) * this.options.slideToShow,
         totalSlides,
       );
-      this.info.textContent = `${visibleSlides} / ${totalSlides}`;
+      currentContainer.textContent = `${visibleSlides}`;
+      totalContainer.textContent = ` / ${totalSlides}`;
     }
     const isAtStart = this.currentIndex <= 0;
     const isAtEnd = this.currentIndex >= this.maxIndex;

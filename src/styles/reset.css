@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 * {
@@ -13,9 +14,16 @@ body {
   font-weight: var(--font-weight-regular);
   font-size: var(--text-body);
   line-height: 1.35;
-  color: var(--color-body);
+  color: var(--color-primary);
 }
-* {
+
+@media (min-width: 768px) {
+  html {
+    overflow-x: unset;
+  }
+}
+
+/* * {
   outline: 1px solid red;
   background: rgba(255, 0, 0, 0.1);
-}
+} */

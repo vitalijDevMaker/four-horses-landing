@@ -1,10 +1,10 @@
 :root {
-  --color-primary: #3057a2;
-  --color-secondary: #f54932;
+  --color-primary: #313131;
+  --color-primary-light: rgba(49, 49, 49, 0.6);
+  --color-accent: #3057a2;
+  --color-danger: #f54932;
   --color-light: #e9ded4;
   --color-dark: #1f1f1f;
-  --color-body: #313131;
-  --color-body-light: rgba(49, 49, 49, 0.6);
   --color-white: #ffffff;
   --color-gray-light: #d6d6d6;
   --color-gold: #fbce51;
@@ -32,7 +32,8 @@
   --text-button: var(--font-size-18); /* кнопки, подзаголовки */
   --text-lead: var(--font-size-20); /* лиды, акценты */
   --text-title: 36px; /* подзаголовки секций */
-  --text-heading-1: var(--font-size-54); /* главный слоган */
+  --text-heading-1: var(--font-size-54);
+  --text-heading-3: 24px;
   --text-heading-super: var(--font-size-60);
   --text-link: 20px;
   --btn-radius: 66px;

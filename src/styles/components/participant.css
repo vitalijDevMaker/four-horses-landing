@@ -1,10 +1,14 @@
 .participants {
   &__title {
-    margin-bottom: 55px;
+    margin-bottom: 36px;
   }
 
   &__container {
     position: relative;
+  }
+
+  &__slider-actions {
+    margin-top: 40px;
   }
 }
 
@@ -22,13 +26,24 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 12px;
+  gap: 6px;
 
   &__image {
     width: 100%;
-    max-width: 320px;
+    max-width: 244px;
     height: auto;
     display: block;
+  }
+
+  &__name {
+    text-transform: unset;
+    font-family: var(--font-primary);
+  }
+
+  &__status {
+    font-size: var(--text-lead);
+    color: var(--color-primary-light);
+    margin-bottom: 10px;
   }
 
   &__image {
@@ -36,18 +51,30 @@
   }
 }
 
-@media (min-width: 768px) {
-  #participants-slider {
-    > .slider__actions {
-      position: absolute;
-      top: 9px;
-      right: 22px;
-      z-index: 2;
+@media (min-width: 992px) {
+  .participant-card {
+    &__image {
+      max-width: 320px;
+    }
+  }
+
+  .participants {
+    &__title {
+      margin-bottom: 55px;
     }
 
-    .slider__icon {
-      width: 44px;
-      height: 44px;
+    &__slider {
+      .slider__actions {
+        position: absolute;
+        top: -16px;
+        right: 10px;
+        z-index: 2;
+      }
+
+      .slider__icon {
+        width: 44px;
+        height: 44px;
+      }
     }
   }
 }

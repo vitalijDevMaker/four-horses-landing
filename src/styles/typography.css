@@ -16,6 +16,14 @@ h2 {
   font-size: var(--text-title);
 }
 
+h3 {
+  font-size: var(--text-heading-3);
+}
+
+s {
+  text-decoration-color: var(--color-danger);
+}
+
 .title {
   &--1 {
     font-size: var(--text-heading-1);
@@ -27,7 +35,7 @@ h2 {
   display: inline-block;
   line-height: 120%;
   font-size: var(--text-link);
-  color: var(--color-primary);
+  color: var(--color-accent);
   text-decoration: none;
   text-transform: none;
   font-family: var(--font-primary);

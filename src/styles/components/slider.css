@@ -14,12 +14,20 @@
   &__actions {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 14px;
+  }
+
+  &__info {
+    white-space: nowrap;
+    &-total {
+      color: var(--color-primary-light);
+    }
   }
 
   &__prev,
   &__next {
-    --slider-btn-bg: var(--color-body);
+    --slider-btn-bg: var(--color-primary);
     --slider-btn-arrow: var(--color-white);
     border: 0;
     background: transparent;
@@ -50,7 +58,7 @@
   &__prev:hover,
   &__next:hover {
     --slider-btn-bg: var(--color-gold);
-    --slider-btn-arrow: var(--color-body);
+    --slider-btn-arrow: var(--color-primary);
   }
 
   &__prev:disabled,
@@ -62,7 +70,7 @@
 
   &-pagination {
     display: flex;
-    gap: 0 10px;
+    gap: 0 6px;
     list-style-type: none;
 
     &__item {
@@ -71,10 +79,13 @@
       flex: 1 0 10px;
       height: 10px;
       border-radius: 50%;
-      background-color: var(--color-body);
+      background-color: var(--color-primary);
       &--active {
         background-color: var(--color-disabled);
       }
     }
   }
+}
+
+@media (max-width: 767px) {
 }

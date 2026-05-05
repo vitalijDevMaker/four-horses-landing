@@ -52,6 +52,21 @@
     width: 100%;
   }
 }
+@media (max-width: 992px) {
+  .tournament-header {
+    &__btn {
+      &--white-on-mobile {
+        --btn-bg: rgba(var(--color-white), 0.6);
+        --btn-color: var(--color-primary);
+        --btn-border-color: rgba(var(--color-white), 0.6);
+
+        --btn-hover-bg: transparent;
+        --btn-hover-color: var(--color-primary);
+        --btn-hover-border-color: rgba(var(--color-white), 0.6);
+      }
+    }
+  }
+}
 
 @media (min-width: 768px) {
   .tournament-header {
