@@ -58,6 +58,7 @@
       padding: 14px 0 14px 0;
       border-right: 2px solid var(--color-gray-lighter);
       margin-bottom: 0;
+      margin-right: 0;
     }
 
     &__value {
