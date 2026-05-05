@@ -85,10 +85,10 @@ class Slider {
   }
 
   handleResize(e) {
-    this.breakpointsCheck();
-    this.updateNoTransformClass();
     clearTimeout(this.resizeTimerId);
     this.resizeTimerId = setTimeout(() => {
+      this.breakpointsCheck();
+      this.updateNoTransformClass();
       this.update(false);
     }, 100);
   }
@@ -127,7 +127,7 @@ class Slider {
 
   generatePagination() {
     this.slides.forEach((i, index) => {
-      const paginationItem = document.createElement("button");
+      const paginationItem = document.createElement("li");
       paginationItem.classList.add("slider-pagination__item");
       this.pagination?.append(paginationItem);
     });
