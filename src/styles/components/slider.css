@@ -79,9 +79,9 @@
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background-color: var(--color-primary);
+      background-color: var(--color-disabled);
       &--active {
-        background-color: var(--color-disabled);
+        background-color: var(--color-primary);
       }
     }
   }
