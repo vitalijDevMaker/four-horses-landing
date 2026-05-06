@@ -1,20 +1,11 @@
 .support {
-  --support-header-m: 0 0 40px 0;
+  --support-header-mb: 40px 0;
   --details-list-margin: 44px 0 35px 0;
   --img-left-transform: scale(1.13) translate(0px, 14px);
   --img-left-margin-bottom: 59px;
-  --img-top-margin: 24px 0;
-  --img-top-position: static;
-  --img-top-top: auto;
-  --img-top-grid-column: span 12;
-  --img-top-grid-row: 2;
-  --title-top-grid-column: span 12;
-  --title-top-grid-row: 1;
-  --title-bottom-grid-column: span 12;
-  --title-bottom-grid-row: 3;
 
   &__header-grid {
-    margin: var(--support-header-m);
+    margin-bottom: 40px;
   }
 
   &__title {
@@ -26,23 +17,14 @@
     }
 
     &--top {
-      grid-column: var(--title-top-grid-column);
-      grid-row: var(--title-top-grid-row);
-    }
-
-    &--bottom {
-      grid-column: var(--title-bottom-grid-column);
-      grid-row: var(--title-bottom-grid-row);
+      margin-bottom: 22px;
+      display: inline-block;
     }
   }
 
   &__img-top {
-    margin: var(--img-top-margin);
     max-width: 100%;
-    position: var(--img-top-position);
-    top: var(--img-top-top);
-    grid-column: var(--img-top-grid-column);
-    grid-row: var(--img-top-grid-row);
+    margin-bottom: 16px;
   }
 
   &__img-left {
@@ -56,20 +38,30 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .support {
-    --support-header-m: 0 0 37px 0;
     --details-list-margin: 60px 0 40px 0;
     --img-left-transform: scale(1.07) translate(-10px, -10px);
     --img-left-margin-bottom: 0;
-    --img-top-margin: 0;
-    --img-top-position: relative;
-    --img-top-top: -25px;
-    --img-top-grid-column: 9 / span 4;
-    --img-top-grid-row: 1 / span 3;
-    --title-top-grid-column: span 8;
-    --title-top-grid-row: 1;
-    --title-bottom-grid-column: span 8;
-    --title-bottom-grid-row: 2;
+
+    &__header-grid {
+      margin-bottom: 93px;
+      position: relative;
+      padding-right: 400px;
+    }
+
+    &__title {
+      &--top {
+        margin-bottom: 0;
+        display: inline;
+      }
+    }
+
+    &__img-top {
+      position: absolute;
+      top: -28px;
+      right: 0;
+      width: 393px;
+    }
   }
 }

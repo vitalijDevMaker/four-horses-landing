@@ -9,6 +9,7 @@
     flex-wrap: nowrap;
     transition: transform ease 0.5s;
     list-style-type: none;
+    will-change: transform;
   }
 
   &__actions {
