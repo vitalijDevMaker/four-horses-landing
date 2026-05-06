@@ -52,6 +52,12 @@
 }
 
 @media (min-width: 992px) {
+  .participants {
+    &__slider-actions {
+      margin-top: 0;
+    }
+  }
+
   .participant-card {
     &__image {
       max-width: 320px;
@@ -66,8 +72,8 @@
     &__slider {
       .slider__actions {
         position: absolute;
-        top: -16px;
-        right: 10px;
+        top: 8px;
+        right: 22px;
         z-index: 2;
       }
 

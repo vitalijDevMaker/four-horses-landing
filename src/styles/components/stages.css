@@ -40,7 +40,10 @@
       width: 336px;
       height: 252px;
       pointer-events: none;
-      background-image: url("../../assets/img/plane.png");
+      background-image: image-set(
+        url("../../assets/img/plane.png") 1x,
+        url("../../assets/img/plane@2x.png") 2x
+      );
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
@@ -178,7 +181,10 @@
         width: 406px;
         height: 230px;
         pointer-events: none;
-        background-image: url("../../assets/img/plane.png");
+        background-image: image-set(
+          url("../../assets/img/plane.png") 1x,
+          url("../../assets/img/plane@2x.png") 2x
+        );
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;

@@ -15,15 +15,5 @@ body {
   font-size: var(--text-body);
   line-height: 1.35;
   color: var(--color-primary);
+  overflow-x: hidden;
 }
-
-@media (min-width: 768px) {
-  html {
-    overflow-x: unset;
-  }
-}
-
-/* * {
-  outline: 1px solid red;
-  background: rgba(255, 0, 0, 0.1);
-} */

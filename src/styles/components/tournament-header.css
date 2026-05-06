@@ -64,6 +64,12 @@
   }
 }
 
+@media (max-width: 375px) {
+  .tournament-header {
+    background-position: -255px 0;
+  }
+}
+
 @media (min-width: 768px) {
   .tournament-header {
     background-image: image-set(
