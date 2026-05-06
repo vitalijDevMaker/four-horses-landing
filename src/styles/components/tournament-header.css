@@ -38,7 +38,7 @@
   &__description {
     margin-bottom: 30px;
     text-align: left;
-    font-size: var(--font-size-18);
+    font-size: var(--text-button);
   }
 
   &__actions {

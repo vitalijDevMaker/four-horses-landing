@@ -20,22 +20,15 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  --font-size-16: 16px;
-  --font-size-18: 18px;
-  --font-size-20: 20px;
-
-  --font-size-36: 36px;
-  --font-size-54: 54px;
-  --font-size-60: 60px;
-
-  --text-body: var(--font-size-16); /* основной текст */
-  --text-button: var(--font-size-18); /* кнопки, подзаголовки */
-  --text-lead: var(--font-size-20); /* лиды, акценты */
-  --text-title: 36px; /* подзаголовки секций */
-  --text-heading-1: var(--font-size-54);
+  --text-body: 16px;
+  --text-button: 18px;
+  --text-lead: 20px;
+  --text-title: 36px;
+  --text-heading-1: 54px;
   --text-heading-3: 24px;
-  --text-heading-super: var(--font-size-60);
+  --text-heading-super: 60px;
   --text-link: 20px;
+
   --btn-radius: 66px;
   --btn-padding-y: 12px;
   --btn-padding-x: 20px;
