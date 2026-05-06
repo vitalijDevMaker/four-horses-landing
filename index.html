@@ -5,8 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/four-horses-landing/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Клуб четырех коней</title>
-    <script type="module" crossorigin src="/four-horses-landing/assets/index-DaVXyUxM.js"></script>
-    <link rel="stylesheet" crossorigin href="/four-horses-landing/assets/index-PcCLHBCz.css">
+    <script type="module" crossorigin src="/four-horses-landing/assets/index-DqejF55d.js"></script>
+    <link rel="stylesheet" crossorigin href="/four-horses-landing/assets/index-C4zomFqg.css">
   </head>
   <body>
     <header class="tournament-header">
@@ -94,18 +94,18 @@
             </div>
 
             <img
-              src="/four-horses-landing/assets/peolpe-play-chess-DRZmtbI7.jpg"
+              src="/four-horses-landing/assets/peolpe-play-chess-C7HyF35m.jpg"
               class="support__img-top"
-              srcset="/four-horses-landing/assets/peolpe-play-chess-2x-CryPBk-u.jpg"
+              srcset="/four-horses-landing/assets/peolpe-play-chess@2x-DK3dVdhA.jpg"
               alt="Люди играют в шахматы"
             />
           </div>
           <div class="grid">
             <div class="col-md-5">
               <img
-                src="/four-horses-landing/assets/man-think-DKFGjF0E.png"
+                src="/four-horses-landing/assets/man-think-DIagjl3T.png"
                 class="support__img-left"
-                srcset="/four-horses-landing/assets/man-think-2x-BTTMsn0K.png"
+                srcset="/four-horses-landing/assets/man-think@2x-B2T5jLfA.png"
                 alt="Люди играют в шахматы"
               />
             </div>
@@ -303,9 +303,17 @@
         </div>
       </section>
 
-      <section class="participants sections__participants">
+      <section
+        aria-labelledby="participants-heading"
+        class="participants sections__participants"
+      >
         <div class="container participants__container">
-          <h2 class="title title--1 participants__title">Участники турнира</h2>
+          <h2
+            id="participants-heading"
+            class="title title--1 participants__title"
+          >
+            Участники турнира
+          </h2>
           <div class="slider participants__slider" id="participants-slider">
             <div class="slider__viewport">
               <ul class="slider__track participants-list">
@@ -313,8 +321,9 @@
                   <article class="participant-card">
                     <img
                       class="participant-card__image"
-                      src="/four-horses-landing/assets/participant-placeholder-ls6JAGGG.png"
+                      src="/four-horses-landing/assets/participant-placeholder-DICyO-z2.png"
                       alt="Хозе-Рауль Капабланка"
+                      srcset="/four-horses-landing/assets/participant-placeholder@2x-DSx8cvEZ.png"
                     />
                     <h3 class="participant-card__name">
                       Хозе-Рауль Капабланка
@@ -331,8 +340,9 @@
                   <article class="participant-card">
                     <img
                       class="participant-card__image"
-                      src="/four-horses-landing/assets/participant-placeholder-ls6JAGGG.png"
+                      src="/four-horses-landing/assets/participant-placeholder-DICyO-z2.png"
                       alt="Эммануил Ласкер"
+                      srcset="/four-horses-landing/assets/participant-placeholder@2x-DSx8cvEZ.png"
                     />
                     <h3 class="participant-card__name">Эммануил Ласкер</h3>
                     <p class="participant-card__status">
@@ -347,8 +357,9 @@
                   <article class="participant-card">
                     <img
                       class="participant-card__image"
-                      src="/four-horses-landing/assets/participant-placeholder-ls6JAGGG.png"
+                      src="/four-horses-landing/assets/participant-placeholder-DICyO-z2.png"
                       alt="Александр Алехин"
+                      srcset="/four-horses-landing/assets/participant-placeholder@2x-DSx8cvEZ.png"
                     />
                     <h3 class="participant-card__name">Александр Алехин</h3>
                     <p class="participant-card__status">
@@ -363,8 +374,9 @@
                   <article class="participant-card">
                     <img
                       class="participant-card__image"
-                      src="/four-horses-landing/assets/participant-placeholder-ls6JAGGG.png"
+                      src="/four-horses-landing/assets/participant-placeholder-DICyO-z2.png"
                       alt="Арон Нимцович"
+                      srcset="/four-horses-landing/assets/participant-placeholder@2x-DSx8cvEZ.png"
                     />
                     <h3 class="participant-card__name">Арон Нимцович</h3>
                     <p class="participant-card__status">
@@ -379,8 +391,9 @@
                   <article class="participant-card">
                     <img
                       class="participant-card__image"
-                      src="/four-horses-landing/assets/participant-placeholder-ls6JAGGG.png"
+                      src="/four-horses-landing/assets/participant-placeholder-DICyO-z2.png"
                       alt="Рихард Рети"
+                      srcset="/four-horses-landing/assets/participant-placeholder@2x-DSx8cvEZ.png"
                     />
                     <h3 class="participant-card__name">Рихард Рети</h3>
                     <p class="participant-card__status">
@@ -395,8 +408,9 @@
                   <article class="participant-card">
                     <img
                       class="participant-card__image"
-                      src="/four-horses-landing/assets/participant-placeholder-ls6JAGGG.png"
+                      src="/four-horses-landing/assets/participant-placeholder-DICyO-z2.png"
                       alt="Остап Бендер"
+                      srcset="/four-horses-landing/assets/participant-placeholder@2x-DSx8cvEZ.png"
                     />
                     <h3 class="participant-card__name">Остап Бендер</h3>
                     <p class="participant-card__status">Гроссмейстер</p>
@@ -408,60 +422,58 @@
               </ul>
             </div>
             <div class="slider__actions participants__slider-actions">
-              <div class="slider__actions">
-                <button
-                  class="slider__prev"
-                  type="button"
-                  aria-controls="stages-slider-track"
-                  aria-label="Показать предыдущий этап"
+              <button
+                class="slider__prev"
+                type="button"
+                aria-controls="stages-slider-track"
+                aria-label="Показать предыдущий этап"
+              >
+                <svg
+                  class="slider__icon"
+                  width="44"
+                  height="44"
+                  viewBox="0 0 44 44"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
-                  <svg
-                    class="slider__icon"
-                    width="44"
-                    height="44"
-                    viewBox="0 0 44 44"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <circle class="slider__icon-bg" cx="22" cy="22" r="22" />
-                    <path
-                      class="slider__icon-arrow"
-                      d="M19.4618 13.5384L27.9233 21.9999L19.4618 30.4615"
-                      stroke-width="2"
-                      stroke-linecap="square"
-                    />
-                  </svg>
-                </button>
-                <div class="slider__info">
-                  <span class="slider__info-current"></span>
-                  <span class="slider__info-total"></span>
-                </div>
-                <button
-                  class="slider__next"
-                  type="button"
-                  aria-controls="stages-slider-track"
-                  aria-label="Показать следующий этап"
-                >
-                  <svg
-                    class="slider__icon"
-                    width="44"
-                    height="44"
-                    viewBox="0 0 44 44"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <circle class="slider__icon-bg" cx="22" cy="22" r="22" />
-                    <path
-                      class="slider__icon-arrow"
-                      d="M19.4618 13.5384L27.9233 21.9999L19.4618 30.4615"
-                      stroke-width="2"
-                      stroke-linecap="square"
-                    />
-                  </svg>
-                </button>
+                  <circle class="slider__icon-bg" cx="22" cy="22" r="22" />
+                  <path
+                    class="slider__icon-arrow"
+                    d="M19.4618 13.5384L27.9233 21.9999L19.4618 30.4615"
+                    stroke-width="2"
+                    stroke-linecap="square"
+                  />
+                </svg>
+              </button>
+              <div class="slider__info">
+                <span class="slider__info-current"></span>
+                <span class="slider__info-total"></span>
               </div>
+              <button
+                class="slider__next"
+                type="button"
+                aria-controls="stages-slider-track"
+                aria-label="Показать следующий этап"
+              >
+                <svg
+                  class="slider__icon"
+                  width="44"
+                  height="44"
+                  viewBox="0 0 44 44"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <circle class="slider__icon-bg" cx="22" cy="22" r="22" />
+                  <path
+                    class="slider__icon-arrow"
+                    d="M19.4618 13.5384L27.9233 21.9999L19.4618 30.4615"
+                    stroke-width="2"
+                    stroke-linecap="square"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
