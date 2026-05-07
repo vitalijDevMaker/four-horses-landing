@@ -3,7 +3,7 @@ class Slider {
   constructor(el, options = {}) {
     this.options = {
       showInfo: options.showInfo ?? false,
-      autoPlay: this.normalizeAutoPlay(options.autoPlay),
+      autoPlay: Slider.normalizeAutoPlay(options.autoPlay),
       pagination: options.pagination ?? false,
       slideToShow: options.slideToShow ?? 1,
       breakpoints: options.breakpoints ?? {},
@@ -27,7 +27,7 @@ class Slider {
     this.init();
   }
 
-  normalizeAutoPlay(value) {
+  static normalizeAutoPlay(value) {
     if (value === false) return false;
     if (value === true) return 3000;
     if (typeof value === "number" && value > 0) return value;
