@@ -95,7 +95,7 @@ class Slider {
     this.currentIndex = Math.min(this.currentIndex, this.maxIndex);
   }
 
-  handleResize(e) {
+  handleResize() {
     this.applyBreakpoints();
     this.update();
   }
@@ -137,7 +137,7 @@ class Slider {
 
   generatePagination() {
     if (!this.pagination) {
-      console.log("Нет контейнера для пагинации .slider-pagination");
+      console.warn("Нет контейнера для пагинации .slider-pagination");
       return;
     }
     Array(this.maxIndex + 1)
