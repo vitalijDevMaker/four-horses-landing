@@ -218,10 +218,8 @@ class Slider {
   destroy() {
     this.stopAutoPlay();
 
-    if (this.prevBtn)
-      this.prevBtn.removeEventListener("click", this.handlePrev);
-    if (this.nextBtn)
-      this.nextBtn.removeEventListener("click", this.handleNext);
+    if (this.prevBtn) this.prevBtn.removeEventListener("click", this.prev);
+    if (this.nextBtn) this.nextBtn.removeEventListener("click", this.next);
 
     window.removeEventListener("resize", this.handleResize);
 
