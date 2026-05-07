@@ -6,10 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const participantsSliderContainer = document.getElementById(
     "participants-slider",
   );
-  const sliderStages = new Slider(stagesSliderContainer, {
-    pagination: true,
-    disableTransformWidth: 768,
-  });
+  let sliderStages = null;
   const participantStages = new Slider(participantsSliderContainer, {
     autoPlay: 4000,
     pagination: false,
@@ -24,4 +21,25 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
+
+  const initStagesSlider = () => {
+    const isMobile = window.innerWidth < 768;
+    if (isMobile && !sliderStages) {
+      sliderStages = new Slider(stagesSliderContainer, {
+        pagination: true,
+      });
+    } else if (!isMobile && sliderStages) {
+      sliderStages.destroy();
+      sliderStages = null;
+    }
+  };
+
+  const handleResize = () => {
+    initStagesSlider();
+  };
+
+  const debouncedResize = Slider.debounce(handleResize, 100);
+  window.addEventListener("resize", debouncedResize);
+
+  initStagesSlider();
 });

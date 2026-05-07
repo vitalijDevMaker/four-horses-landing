@@ -6,7 +6,6 @@ class Slider {
       autoPlay: this.normalizeAutoPlay(options.autoPlay),
       pagination: options.pagination ?? false,
       slideToShow: options.slideToShow ?? 1,
-      disableTransformWidth: options.disableTransformWidth ?? false,
       breakpoints: options.breakpoints ?? {},
     };
     this.baseSlideToShow = this.options.slideToShow;
@@ -44,8 +43,10 @@ class Slider {
   }
 
   bindEvents() {
-    if (this.prevBtn) this.prevBtn.addEventListener("click", () => this.prev());
-    if (this.nextBtn) this.nextBtn.addEventListener("click", () => this.next());
+    if (this.prevBtn)
+      this.prevBtn.addEventListener("click", this.prev.bind(this));
+    if (this.nextBtn)
+      this.nextBtn.addEventListener("click", this.next.bind(this));
     this.resizeHandler = Slider.debounce(this.handleResize.bind(this), 100);
     window.addEventListener("resize", this.resizeHandler);
   }
@@ -72,17 +73,9 @@ class Slider {
     }
     this.bindEvents();
     this.applyBreakpoints();
-    this.toggleNoTransformClass();
     if (this.options.pagination) this.generatePagination();
     this.startAutoPlay();
     this.update();
-  }
-
-  toggleNoTransformClass() {
-    if (!this.track || !this.options.disableTransformWidth) return;
-    const shouldAddNoTransformClass =
-      window.innerWidth > this.options.disableTransformWidth;
-    this.track.classList.toggle("no-transform", shouldAddNoTransformClass);
   }
 
   applyBreakpoints() {
@@ -104,7 +97,6 @@ class Slider {
 
   handleResize(e) {
     this.applyBreakpoints();
-    this.toggleNoTransformClass();
     this.update();
   }
 
@@ -221,6 +213,34 @@ class Slider {
       this.stopAutoPlay();
       this.startAutoPlay();
     }
+  }
+
+  destroy() {
+    this.stopAutoPlay();
+
+    // Удаляем обработчики кнопок
+    if (this.prevBtn)
+      this.prevBtn.removeEventListener("click", this.handlePrev);
+    if (this.nextBtn)
+      this.nextBtn.removeEventListener("click", this.handleNext);
+    // Удаляем resize
+    window.removeEventListener("resize", this.handleResize);
+
+    // Сбрасываем стили
+    if (this.track) {
+      this.track.style.transform = "";
+      this.track.classList.remove("no-transform");
+    }
+    this.slides.forEach((slide) => {
+      slide.style.flex = "";
+    });
+
+    // Очищаем пагинацию
+    if (this.pagination) this.pagination.innerHTML = "";
+
+    // Сбрасываем состояние кнопок (disabled)
+    if (this.prevBtn) this.prevBtn.disabled = false;
+    if (this.nextBtn) this.nextBtn.disabled = false;
   }
 }
 
