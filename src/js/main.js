@@ -7,12 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
     "participants-slider",
   );
   const sliderStages = new Slider(stagesSliderContainer, {
-    autoPlay: 4000,
     pagination: true,
     disableTransformWidth: 768,
   });
   const participantStages = new Slider(participantsSliderContainer, {
-    autoPlay: false,
+    autoPlay: 4000,
     pagination: false,
     slideToShow: 3,
     showInfo: true,
