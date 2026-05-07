@@ -218,15 +218,13 @@ class Slider {
   destroy() {
     this.stopAutoPlay();
 
-    // Удаляем обработчики кнопок
     if (this.prevBtn)
       this.prevBtn.removeEventListener("click", this.handlePrev);
     if (this.nextBtn)
       this.nextBtn.removeEventListener("click", this.handleNext);
-    // Удаляем resize
+
     window.removeEventListener("resize", this.handleResize);
 
-    // Сбрасываем стили
     if (this.track) {
       this.track.style.transform = "";
       this.track.classList.remove("no-transform");
@@ -235,10 +233,8 @@ class Slider {
       slide.style.flex = "";
     });
 
-    // Очищаем пагинацию
     if (this.pagination) this.pagination.innerHTML = "";
 
-    // Сбрасываем состояние кнопок (disabled)
     if (this.prevBtn) this.prevBtn.disabled = false;
     if (this.nextBtn) this.nextBtn.disabled = false;
   }
