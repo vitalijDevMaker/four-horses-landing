@@ -23,6 +23,8 @@ class Slider {
     this.autoPlayTimerId = null;
     this.slideWidth = 0;
     this.resizeHandler = null;
+    this.prevHandler = null;
+    this.nextHandler = null;
 
     this.init();
   }
@@ -43,10 +45,10 @@ class Slider {
   }
 
   bindEvents() {
-    if (this.prevBtn)
-      this.prevBtn.addEventListener("click", this.prev.bind(this));
-    if (this.nextBtn)
-      this.nextBtn.addEventListener("click", this.next.bind(this));
+    this.nextHandler = this.next.bind(this);
+    this.prevHandler = this.prev.bind(this);
+    if (this.prevBtn) this.prevBtn.addEventListener("click", this.prevHandler);
+    if (this.nextBtn) this.nextBtn.addEventListener("click", this.nextHandler);
     this.resizeHandler = Slider.debounce(this.handleResize.bind(this), 100);
     window.addEventListener("resize", this.resizeHandler);
   }
@@ -165,7 +167,7 @@ class Slider {
 
   updatePagination() {
     if (this.options.pagination && this.pagination) {
-      for (let i = 0; i <= this.maxIndex + 1; i++) {
+      for (let i = 0; i < this.maxIndex + 1; i++) {
         if (this.pagination.children[i]) {
           this.pagination.children[i].classList.toggle(
             "slider-pagination__item--active",
@@ -221,7 +223,7 @@ class Slider {
     if (this.prevBtn) this.prevBtn.removeEventListener("click", this.prev);
     if (this.nextBtn) this.nextBtn.removeEventListener("click", this.next);
 
-    window.removeEventListener("resize", this.handleResize);
+    window.removeEventListener("resize", this.resizeHandler);
 
     if (this.track) {
       this.track.style.transform = "";
