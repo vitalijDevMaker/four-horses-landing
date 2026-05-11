@@ -1,5 +1,4 @@
 class Slider {
-  sliderContainer;
   constructor(el, options = {}) {
     this.options = {
       showInfo: options.showInfo ?? false,
@@ -8,6 +7,7 @@ class Slider {
       slideToShow: options.slideToShow ?? 1,
       breakpoints: options.breakpoints ?? {},
     };
+
     this.baseSlideToShow = this.options.slideToShow;
 
     this.sliderContainer = el;
@@ -19,9 +19,11 @@ class Slider {
     this.prevBtn = this.sliderContainer.querySelector(".slider__prev");
     this.nextBtn = this.sliderContainer.querySelector(".slider__next");
     this.info = this.sliderContainer.querySelector(".slider__info");
+
     this.currentIndex = 0;
-    this.autoPlayTimerId = null;
     this.slideWidth = 0;
+
+    this.autoPlayTimerId = null;
     this.resizeHandler = null;
     this.prevHandler = null;
     this.nextHandler = null;
@@ -108,16 +110,12 @@ class Slider {
     const pageWidth = this.slideWidth * this.options.slideToShow;
     const offset = -(this.currentIndex * pageWidth);
 
-    const hasNoTransform = this.track.classList.contains("no-transform");
-    if (!hasNoTransform) {
-      this.track.style.transform = `translate3d(${offset}px, 0, 0)`;
-    } else {
-      this.track.style.transform = "";
-    }
+    this.track.style.transform = `translate3d(${offset}px, 0, 0)`;
 
     this.slides.forEach((s) => {
       s.style.flex = `0 0 ${this.slideWidth}px`;
     });
+
     this.updateUI();
   }
 
@@ -227,8 +225,8 @@ class Slider {
 
     if (this.track) {
       this.track.style.transform = "";
-      this.track.classList.remove("no-transform");
     }
+
     this.slides.forEach((slide) => {
       slide.style.flex = "";
     });
